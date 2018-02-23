@@ -1,6 +1,8 @@
 #include "Level.h"
 #include "GameLoop.h"
 #include "Player.h"
+#include "Sprite.h"
+
 
 using namespace engine;
 
@@ -15,6 +17,11 @@ namespace survivedsv {
 	void Level::start()
 	{
 		loop->run();
+	}
+
+	void Level::add(Sprite* s)
+	{
+		loop->add(s);
 	}
 
 

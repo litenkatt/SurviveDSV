@@ -4,6 +4,7 @@
 #include "Sprite.h"
 #include "Obstacle.h"
 #include "RemovableObstacle.h"
+#include "Enemy.h"
 
 
 using namespace engine;
@@ -18,6 +19,8 @@ namespace survivedsv {
 			loop->add(o);
 			RemovableObstacle* ro = RemovableObstacle::getInstance();
 			loop->add(ro);
+			Enemy* e = Enemy::getInstance();
+			loop->add(e);
 		}
 		//loop->add(p);
 		loop->addPlayer(p);

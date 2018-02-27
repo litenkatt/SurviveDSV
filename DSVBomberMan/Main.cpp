@@ -31,9 +31,9 @@ int main(int argc, char** argv) {
 
 	SDL_SetRenderDrawColor(eng.getRen(), 150, 0, 150, 255);
 	SDL_RenderClear(eng.getRen());
-	Label* lbl = Label::getInstance(150, 30, 300, 100, "Tryck på knappen för att starta!");
+	Label* lbl = Label::getInstance(450, 100, 300, 100, "Tryck på knappen för att starta!");
 	lbl->draw();
-	Button* b = new StartButton(200, 150, 200, 200);
+	Button* b = new StartButton(500, 250, 200, 200);
 	b->draw();
 	SDL_RenderPresent(eng.getRen());
 

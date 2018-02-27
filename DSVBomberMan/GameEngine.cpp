@@ -6,7 +6,7 @@ namespace engine {
 	{
 		SDL_Init(SDL_INIT_EVERYTHING);
 		win = SDL_CreateWindow("SurviveDSV", SDL_WINDOWPOS_CENTERED,
-			SDL_WINDOWPOS_CENTERED, 600, 400, 0);
+			SDL_WINDOWPOS_CENTERED, 1200, 600, 0);
 		ren = SDL_CreateRenderer(win, -1, 0);
 		TTF_Init();
 		font = TTF_OpenFont("c:/Windows/Fonts/arial.ttf", 36);

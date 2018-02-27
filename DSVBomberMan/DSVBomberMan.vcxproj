@@ -127,6 +127,7 @@
     <ClCompile Include="MovingSprite.cpp" />
     <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RemovableObstacle.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="StillSprite.cpp" />
   </ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="MovingSprite.h" />
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RemovableObstacle.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="StillSprite.h" />
   </ItemGroup>

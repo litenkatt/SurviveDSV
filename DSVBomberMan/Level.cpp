@@ -2,6 +2,8 @@
 #include "GameLoop.h"
 #include "Player.h"
 #include "Sprite.h"
+#include "Obstacle.h"
+#include "RemovableObstacle.h"
 
 
 using namespace engine;
@@ -11,6 +13,12 @@ namespace survivedsv {
 	{
 		loop = new GameLoop();
 		Player* p = Player::getInstance();
+		if (lev == 1) {
+			Obstacle* o = Obstacle::getInstance(1);
+			loop->add(o);
+			RemovableObstacle* ro = RemovableObstacle::getInstance();
+			loop->add(ro);
+		}
 		//loop->add(p);
 		loop->addPlayer(p);
 	}

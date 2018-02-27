@@ -13,7 +13,6 @@ namespace engine {
 		Player(int x, int y, int w, int h);
 	private:
 		SDL_Texture* texture;
-		SDL_Texture* upIcon, *downIcon;
 	};
 }
 

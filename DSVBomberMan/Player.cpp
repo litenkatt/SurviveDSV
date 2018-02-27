@@ -3,12 +3,11 @@
 #include "Player.h"
 #include "GameEngine.h"
 
-using namespace engine;
 
 namespace engine {
 	Player::Player(int x, int y, int w, int h) : MovingSprite(x, y, w, h)
 	{
-		SDL_Surface* surf = IMG_Load("konstiglilafigur.png"); 
+		SDL_Surface* surf = IMG_Load("player.png"); 
 		texture = SDL_CreateTextureFromSurface(eng.getRen(), surf);
 		SDL_FreeSurface(surf);
 

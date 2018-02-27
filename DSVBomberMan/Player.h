@@ -2,7 +2,7 @@
 #define PLAYER_H
 #include "MovingSprite.h"
 
-namespace survivedsv {
+namespace engine {
 	class Player : public engine::MovingSprite
 	{
 	public:

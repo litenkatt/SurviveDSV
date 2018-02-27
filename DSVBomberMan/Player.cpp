@@ -5,7 +5,7 @@
 
 using namespace engine;
 
-namespace survivedsv {
+namespace engine {
 	Player::Player(int x, int y, int w, int h) : MovingSprite(x, y, w, h)
 	{
 		SDL_Surface* surf = IMG_Load("konstiglilafigur.png"); 

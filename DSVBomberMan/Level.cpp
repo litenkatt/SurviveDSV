@@ -11,7 +11,8 @@ namespace survivedsv {
 	{
 		loop = new GameLoop();
 		Player* p = Player::getInstance();
-		loop->add(p);
+		//loop->add(p);
+		loop->addPlayer(p);
 	}
 
 	void Level::start()
@@ -22,6 +23,10 @@ namespace survivedsv {
 	void Level::add(Sprite* s)
 	{
 		loop->add(s);
+	}
+	void Level::addPlayer(Player* p)
+	{
+		loop->addPlayer(p);
 	}
 
 

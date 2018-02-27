@@ -29,7 +29,6 @@ private:
 
 int main(int argc, char** argv) {
 
-
 	SDL_SetRenderDrawColor(eng.getRen(), 150, 0, 150, 255);
 	SDL_RenderClear(eng.getRen());
 	Label* lbl = Label::getInstance(150, 30, 300, 100, "Tryck på knappen för att starta!");

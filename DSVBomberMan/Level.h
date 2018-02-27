@@ -11,6 +11,7 @@ namespace survivedsv {
 		Level(int lev);
 		void start();
 		void add(engine::Sprite* s);
+		void addPlayer(engine::Player* p);
 		~Level();
 	private:
 		engine::GameLoop* loop;

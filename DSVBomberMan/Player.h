@@ -3,16 +3,13 @@
 #include "MovingSprite.h"
 
 namespace engine {
-	class Player : public engine::MovingSprite
+	class Player : public MovingSprite
 	{
 	public:
-		static Player* getInstance();
 		~Player();
-		void draw() const;
+		virtual void draw() const = 0;
 	protected:
 		Player(int x, int y, int w, int h);
-	private:
-		SDL_Texture* texture;
 	};
 }
 

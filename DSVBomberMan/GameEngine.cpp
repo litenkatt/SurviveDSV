@@ -12,7 +12,6 @@ namespace engine {
 		font = TTF_OpenFont("c:/Windows/Fonts/arial.ttf", 36);
 	}
 
-
 	GameEngine::~GameEngine()
 	{
 		TTF_CloseFont(font);

@@ -42,7 +42,6 @@ namespace engine {
 			SDL_RenderClear(eng.getRen());
 			for (Sprite* s : comps) {
 				s->draw();
-				//std::cout << comps.size();
 			}//for
 				
 			SDL_RenderPresent(eng.getRen());

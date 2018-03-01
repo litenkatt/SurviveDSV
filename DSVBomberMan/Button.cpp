@@ -5,10 +5,10 @@
 #include <SDL_image.h>
 namespace engine {
 
-	Button::Button(int x, int y, int w, int h) :Sprite(x, y, w, h)
+	Button::Button(int x, int y, int w, int h, std::string but, std::string inBut) :Sprite(x, y, w, h)
 	{
-		upIcon = IMG_LoadTexture(eng.getRen(), "button.png");
-		downIcon = IMG_LoadTexture(eng.getRen(), "pressedbutton.png");
+		upIcon = IMG_LoadTexture(eng.getRen(), but.c_str());
+		downIcon = IMG_LoadTexture(eng.getRen(), inBut.c_str());
 		
 	}
 
@@ -18,8 +18,8 @@ namespace engine {
 		SDL_DestroyTexture(downIcon);
 	}
 
-	Button* Button::getInstance(int x, int y, int w, int h) {
-		return new Button(x, y, w, h);
+	Button* Button::getInstance(int x, int y, int w, int h, std::string but, std::string inBut) {
+		return new Button(x, y, w, h, but, inBut);
 	}
 
 	void Button::mouseDown(const SDL_Event& eve) {

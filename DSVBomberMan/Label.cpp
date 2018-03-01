@@ -15,7 +15,7 @@ namespace engine {
 	Label::Label(int x, int y, int w, int h,
 		std::string txt) : Sprite(x, y, w, h), text(txt)
 	{
-		SDL_Surface* surf = TTF_RenderText_Solid(eng.getFont(), text.c_str(), { 0,0,0 });
+		SDL_Surface* surf = TTF_RenderText_Solid(eng.getFont(), text.c_str(), { 255,0,0 });
 		texture = SDL_CreateTextureFromSurface(eng.getRen(), surf);
 		SDL_FreeSurface(surf);
 	}

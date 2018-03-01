@@ -8,7 +8,7 @@ namespace survivedsv {
 	class Level
 	{
 	public:
-		Level(int lev);
+		Level(int lev, int character);
 		void start();
 		void add(engine::Sprite* s);
 		void addPlayer(engine::Player* p);

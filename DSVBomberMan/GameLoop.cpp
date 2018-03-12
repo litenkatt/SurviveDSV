@@ -9,7 +9,7 @@ namespace engine {
 	}
 	void GameLoop::addPlayer(Player* player) {
 		p = player;
-		comps.push_back(player);
+		//comps.push_back(player);
 	}
 
 	void GameLoop::run() {
@@ -25,13 +25,13 @@ namespace engine {
 					break;
 				case SDL_KEYDOWN:
 					switch (eve.key.keysym.sym) {
-						case SDLK_RIGHT: p->right();
+						case SDLK_RIGHT: p->right(&comps);
 							break;
-						case SDLK_LEFT: p->left();
+						case SDLK_LEFT: p->left(&comps);
 							break;
-						case SDLK_UP: p->up();
+						case SDLK_UP: p->up(&comps);
 							break;
-						case SDLK_DOWN: p->down();
+						case SDLK_DOWN: p->down(&comps);
 							break;
 					}
 
@@ -43,7 +43,7 @@ namespace engine {
 			for (Sprite* s : comps) {
 				s->draw();
 			}//for
-				
+			p->draw();
 			SDL_RenderPresent(eng.getRen());
 
 		} //yttre while

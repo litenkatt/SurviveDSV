@@ -15,7 +15,7 @@ namespace survivedsv {
 	}
 	Enemy * Enemy::getInstance()
 	{
-		return new Enemy(400, 400, 100, 100);
+		return new Enemy(500, 100, 100, 100);
 	}
 	Enemy::~Enemy()
 	{

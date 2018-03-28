@@ -2,17 +2,19 @@
 #define ENEMY_H
 #include "MovingSprite.h"
 
-namespace survivedsv {
+namespace engine {
 	class Enemy : public engine::MovingSprite
 	{
 	public:
-		static Enemy* getInstance();
 		~Enemy();
-		void draw() const;
+		virtual void move() = 0;
+		void collision(int, Sprite*);
 	protected:
-		Enemy(int x, int y, int w, int h);
+		Enemy(int x, int y, int speed);
 	private:
-		SDL_Texture* texture;
+		Enemy(const Enemy&) = delete;
+		const Enemy& operator=(const Enemy&) = delete;
+		virtual void draw() const = 0;
 	};
 
 }

@@ -18,6 +18,8 @@ namespace engine {
 	private:
 		std::string text;
 		SDL_Texture* texture;
+		Label(const Label&) = delete;
+		const Label& operator=(const Label&) = delete;
 	};
 
 }

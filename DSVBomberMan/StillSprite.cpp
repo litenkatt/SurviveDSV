@@ -1,13 +1,15 @@
 #include "StillSprite.h"
 #include <SDL.h>
+#include "GameEngine.h"
 
 namespace engine {
 
 	StillSprite::~StillSprite()
 	{
 	}
-	StillSprite::StillSprite(int x, int y, int w, int h) : Sprite(x, y, w, h)
+	StillSprite::StillSprite(int x, int y) : 
+		Sprite(x, y, eng.getTileSize(), eng.getTileSize())
 	{
 	}
-}
 
+}

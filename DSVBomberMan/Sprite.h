@@ -11,9 +11,12 @@ namespace engine {
 		const SDL_Rect& getRect() const { return rect; }
 		void setX(int dif);
 		void setY(int dif);
+		const int getX() const { return rect.x; }
+		const int getY() const { return rect.y; }
+		const int getW() const { return rect.w; }
+		const int getH() const { return rect.h; }
 	protected:
 		Sprite(int x, int y, int w, int h);
-		
 	private:
 		SDL_Rect rect;
 		Sprite(const Sprite&) = delete;

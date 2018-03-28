@@ -9,19 +9,31 @@ namespace engine {
 	public:
 		virtual ~MovingSprite();
 		virtual void draw() const = 0;
-		void left(std::vector<Sprite*>*);
-		void right(std::vector<Sprite*>*);
-		void up(std::vector<Sprite*>*);
-		void down(std::vector<Sprite*>*);
-		
+		void left();
+		void right();
+		void up();
+		void down();
 	protected:
-		MovingSprite(int x, int y, int w, int h);
+		MovingSprite(int x, int y, int w, int h, int speed);
+		virtual void collision(int, Sprite*) {}
+		void resetSteps(int timer);
+		virtual void stepAction(){}
+		bool checkLeft();
+		bool checkRight();
+		bool checkUp();
+		bool checkDown();
 	private:
+
 		int thisTop, thisBottom, thisRight, thisLeft;
 		int otherBottom, otherTop, otherRight, otherLeft;
+		
 		void updateThis();
-		//bool checkCollision(Sprite*);
-		//bool move(std::vector<Sprite*>*);
+		MovingSprite(const MovingSprite&) = delete;
+		const MovingSprite& operator=(const MovingSprite&) = delete;
+		int stepCount;
+		int speed;
+		int stepsLeft;
+		int timer;
 	};
 }
 

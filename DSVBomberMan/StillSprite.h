@@ -9,7 +9,7 @@ namespace engine {
 		virtual ~StillSprite();
 		virtual void draw() const = 0;
 	protected:
-		StillSprite(int x, int y, int w, int h);
+		StillSprite(int x, int y);
 	};
 }
 

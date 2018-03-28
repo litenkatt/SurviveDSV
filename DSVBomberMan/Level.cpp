@@ -1,48 +1,22 @@
 #include "Level.h"
-#include "GameLoop.h"
+#include "GameEngine.h"
 #include "DSVPlayer.h"
 #include "Sprite.h"
 #include "Obstacle.h"
-#include "RemovableObstacle.h"
-#include "Enemy.h"
+#include "Teacher.h"
+#include "Assignment.h"
 #include <iostream>
+#include "GameEngine.h"
 
-
-using namespace engine;
-
-namespace survivedsv {
-	Level::Level(int lev, int character)
+namespace engine {
+	Level::Level()
 	{
-		loop = new GameLoop();
-		DSVPlayer* p = DSVPlayer::getInstance(character);
-		loop->addPlayer(p);
-		std::cout << p;
-
-		if (lev == 1) {
-			Obstacle* o = Obstacle::getInstance(1);
-			loop->add(o);
-			RemovableObstacle* ro = RemovableObstacle::getInstance();
-			loop->add(ro);
-			Enemy* e = Enemy::getInstance();
-			loop->add(e);
-		}
-		
+		lev = 0;
 	}
-
 	void Level::start()
 	{
-		loop->run();
+		eng.run();
 	}
-
-	void Level::add(Sprite* s)
-	{
-		loop->add(s);
-	}
-	void Level::addPlayer(Player* p)
-	{
-		loop->addPlayer(p);
-	}
-
 
 	Level::~Level()
 	{

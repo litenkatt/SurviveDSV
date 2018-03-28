@@ -5,11 +5,9 @@
 
 using namespace engine;
 
-namespace survivedsv {
-	Obstacle * Obstacle::getInstance(int lev)
+	Obstacle * Obstacle::getInstance(int lev, int x, int y)
 	{
-		
-		return new Obstacle(100, 200, 100, 100, lev);
+		return new Obstacle(x, y, lev);
 	}
 	Obstacle::~Obstacle()
 	{
@@ -17,9 +15,8 @@ namespace survivedsv {
 		SDL_DestroyTexture(yellow);
 		SDL_DestroyTexture(red);
 	}
-	Obstacle::Obstacle(int x, int y, int w, int h, int lev) : StillSprite(x, y, w, h), level(lev)
+	Obstacle::Obstacle(int x, int y, int lev) : StillSprite(x, y), level(lev)
 	{
-
 		green = IMG_LoadTexture(eng.getRen(), "greentile.png");
 		yellow = IMG_LoadTexture(eng.getRen(), "yellowtile.png");
 		red = IMG_LoadTexture(eng.getRen(), "redtile.png");
@@ -33,5 +30,5 @@ namespace survivedsv {
 		else
 			SDL_RenderCopy(eng.getRen(), red, NULL, &getRect());
 	}
-}
+
 

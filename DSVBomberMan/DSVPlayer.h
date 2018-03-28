@@ -2,19 +2,18 @@
 #define DSVPLAYER_H
 #include "Player.h"
 
-namespace survivedsv {
 	class DSVPlayer : public engine::Player
 	{
 	public:
-		static DSVPlayer* getInstance(int pic);
+		static DSVPlayer* getInstance
+		(int pic, int x, int y, int speed, int superTime);
 		~DSVPlayer();
 		void draw() const;
 	protected:
-		DSVPlayer(int x, int y, int w, int h, int pic);
+		
 	private:
-		SDL_Texture* texture;
+		DSVPlayer(int x, int y, int pic, int speed, int superTime);
+		SDL_Texture* texture, *assText;
 	};
-}
-
 
 #endif

@@ -1,20 +1,23 @@
 #ifndef LEVEL_H
 #define LEVEL_H
-#include "GameLoop.h"
 #include "Sprite.h"
 
 
-namespace survivedsv {
+namespace engine {
 	class Level
 	{
 	public:
-		Level(int lev, int character);
 		void start();
-		void add(engine::Sprite* s);
-		void addPlayer(engine::Player* p);
+		virtual void nextLevel() = 0;
+		virtual void gameOver() = 0;
+		virtual int getMaxLvl() = 0;
+		int getLev() { return lev; }
+		void next() { lev++; }
 		~Level();
+	protected:
+		Level();
 	private:
-		engine::GameLoop* loop;
+		int lev;
 	};
 }
 
